@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Thank You — OTAKU VAULT</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">OTAKU<span>VAULT</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="merchandise.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:0.7rem;">
+      <div id="hamburger" class="hamburger"><span></span><span></span><span></span></div>
+      <a href="cart.html" class="cart-btn">🛒 Cart <span class="cart-badge" id="cartBadge">0</span></a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── PAGE CONTENT ── -->
+<div class="page-body">
+  <div style="max-width:680px;margin:0 auto;padding:0 1.5rem 5rem;">
+    
+    <!-- Success Message -->
+    <div style="text-align:center;padding:3rem 0 2rem;">
+      <div style="font-size:5rem;margin-bottom:0.8rem;animation:bounce 0.6s ease-out;">🎉</div>
+      <h1 style="font-family:'Bangers',cursive;font-size:clamp(2rem,6vw,3.2rem);letter-spacing:3px;color:var(--accent);text-shadow:0 0 14px var(--accent-glow);margin-bottom:0.5rem;">Order Confirmed!</h1>
+      <p style="color:var(--text-dim);font-size:1.05rem;max-width:480px;margin:0 auto;">Thank you for your order! We've sent a confirmation email with your order details and tracking info.</p>
+    </div>
+
+    <!-- Order Summary -->
+    <div id="orderDetails"></div>
+
+    <!-- Action Buttons -->
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.8rem;margin-top:1.8rem;">
+      <a href="index.html" style="padding:0.7rem;border-radius:50px;background:transparent;border:1px solid var(--border);color:var(--text-dim);font-weight:700;font-size:0.88rem;text-align:center;transition:border-color .2s,color .2s;text-decoration:none;" onmouseover="this.style.borderColor='var(--accent)';this.style.color='var(--accent)'" onmouseout="this.style.borderColor='var(--border)';this.style.color='var(--text-dim)'">← Back to Home</a>
+      <a href="merchandise.html" class="btn-submit" style="margin-top:0;text-align:center;text-decoration:none;display:flex;align-items:center;justify-content:center;">Continue Shopping →</a>
+    </div>
+
+    <!-- Info Box -->
+    <div style="background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);padding:1.5rem;margin-top:2rem;text-align:center;">
+      <h3 style="font-size:0.92rem;font-weight:800;color:var(--accent);margin-bottom:0.5rem;">What's Next?</h3>
+      <p style="color:var(--text-dim);font-size:0.82rem;line-height:1.6;">Your order will be processed within 1–2 business days. You'll receive a shipping notification with tracking details as soon as your package is on its way. Expected delivery: 3–7 business days.</p>
+      <p style="color:var(--text-dim);font-size:0.82rem;line-height:1.6;margin-top:0.8rem;">Questions? <a href="contact.html" style="color:var(--accent);text-decoration:underline;">Contact us</a> anytime.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>OTAKU VAULT</h4>
+      <p>Authentic anime merch for real fans. Founded 2022. Ships worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="merchandise.html">Figures</a></li>
+        <li><a href="merchandise.html">Apparel</a></li>
+        <li><a href="merchandise.html">Accessories</a></li>
+        <li><a href="merchandise.html">Posters</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">Shipping Info</a></li>
+        <li><a href="#">Returns</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <ul>
+        <li><a href="#">Twitter / X</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Discord</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 OtakuVault. All rights reserved. Made with ❤️ for anime fans.</div>
+</footer>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast"><span class="toast-icon" id="toastIcon">✅</span><div class="toast-text" id="toastText"></div></div>
+
+<style>
+@keyframes bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+}
+</style>
+
+<script src="script.js"></script>
+</body>
+</html>
